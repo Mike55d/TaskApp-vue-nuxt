@@ -29,37 +29,39 @@ const ListItem = defineComponent({
     };
 
     return () => (
-      <VCard style={{ marginBottom: "10px",padding:"5px" }}>
-          <VRow>
-            <VCol md="2">
-              <VCheckboxBtn
-                color="red"
-                modelValue={task.completed}
-                onClick={toggleStatusTask}
-              />
-            </VCol>
-            <VCol md="8">
-              <h3
-                class={`text-md-center mt-2 ${
-                  task.completed ? "text-decoration-line-through" : ""
-                }`}
-              >
-                {task.title}
-              </h3>
-            </VCol>
-            <VCol md="2">
-              <VBtn
-                color="plain"
-                style={{
-                  borderRadius: "50px",
-                  minWidth: "35px",
-                  width: "35px",
-                }}
-              >
-                <VIcon color="red" icon="mdi-close" onClick={deleteTask} />
-              </VBtn>
-            </VCol>
-          </VRow>
+      <VCard style={{ marginBottom: "10px", padding: "5px" }}>
+        <VRow>
+          <VCol md="2">
+            <VCheckboxBtn
+              color="red"
+              modelValue={task.completed}
+              // @ts-ignore
+              onClick={toggleStatusTask}
+            />
+          </VCol>
+          <VCol md="8">
+            <h3
+              class={`text-md-center mt-2 ${
+                task.completed ? "text-decoration-line-through" : ""
+              }`}
+            >
+              {task.title}
+            </h3>
+          </VCol>
+          <VCol md="2">
+            <VBtn
+              color="plain"
+              style={{
+                borderRadius: "50px",
+                minWidth: "35px",
+                width: "35px",
+              }}
+            >
+              {/* @ts-ignore */}
+              <VIcon color="red" icon="mdi-close" onClick={deleteTask} />
+            </VBtn>
+          </VCol>
+        </VRow>
       </VCard>
     );
   },

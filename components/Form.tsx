@@ -17,7 +17,7 @@ const Form = defineComponent({
     };
 
     return () => (
-      <VContainer style={{minHeight:'162px'}}>
+      <VContainer style={{ minHeight: "162px" }}>
         <VTextField
           label="Task title"
           modelValue={titleTask.value}
@@ -25,6 +25,7 @@ const Form = defineComponent({
           density="compact"
           variant="outlined"
         />
+        {/* @ts-ignore */}
         <VBtn color="green" onClick={addTask}>
           Add Task
         </VBtn>
