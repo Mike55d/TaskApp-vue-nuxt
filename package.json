@@ -20,6 +20,7 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@pinia/nuxt": "^0.5.1",
+    "cypress": "^13.6.2",
     "pinia": "^2.1.7",
     "sass": "^1.69.7",
     "uuid": "^9.0.1"

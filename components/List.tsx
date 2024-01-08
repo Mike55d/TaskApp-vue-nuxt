@@ -7,7 +7,7 @@ const List = defineComponent({
   setup() {
     const store = todoStore();
     return () => (
-      <VContainer>
+      <VContainer class="list-items">
         {store.tasks.map((task) => {
           return <ListItem task={task} />;
         })}

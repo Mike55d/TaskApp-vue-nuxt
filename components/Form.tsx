@@ -26,7 +26,7 @@ const Form = defineComponent({
           variant="outlined"
         />
         {/* @ts-ignore */}
-        <VBtn color="green" onClick={addTask}>
+        <VBtn class="add-btn" color="green" onClick={addTask}>
           Add Task
         </VBtn>
       </VContainer>
